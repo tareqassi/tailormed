@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Upload Multiple File Request Page</title>
+</head>
+<body>
+
+	<form method="POST"
+		action="http://localhost:8080/rest//files/upload/patients"
+		enctype="multipart/form-data">
+
+		<label for="hospitalName">Enter Hospital Name:</label><br> <input
+			type="text" id="hospitalName" name="hospitalName" required> <br>
+		<div class="form-group mt-3">
+			<label for="file">Select Patients CSV file</label> <input type="file"
+				name="file" class="form-control-file" id="file"
+				accept=".csv">
+		</div>
+
+		<br>
+
+		<button type="submit" class="btn btn-primary">Import Patients
+			Data</button>
+	</form>
+
+	<form method="POST"
+		action="http://localhost:8080/rest//files/upload/treatments"
+		enctype="multipart/form-data">
+
+		<label for="hospitalName">Enter Hospital Name:</label> <br> <input
+			type="text" id="hospitalName" name="hospitalName" required> <br>
+		<div class="form-group mt-3">
+			<label for="file">Select Treatments CSV file</label> <input
+				type="file" name="file" class="form-control-file"
+				id="file" accept=".csv">
+		</div>
+		<br>
+		<button type="submit" class="btn btn-primary">Import
+			Treatments Data</button>
+	</form>
+</body>
+</html>
